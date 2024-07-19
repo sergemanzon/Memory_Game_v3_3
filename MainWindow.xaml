@@ -5,6 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Memory_Game_v3_3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    
+        Title="MainWindow" Height="450" Width="500">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/Winter.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock  Grid.Column="1" Text="Size:" Foreground="White"/>
+        <TextBox x:Name="SizeTxt"  Grid.Column="2"  Foreground="Black" Text="4"/>
+        <Button Content="Build" Click="BuildBtn_Click"  Grid.Column="3" />
+
+        <UniformGrid x:Name="myGrid" Grid.Row="1" Grid.ColumnSpan="4">
+
+        </UniformGrid>
+
+    </Grid>
 </Window>
